@@ -18,24 +18,21 @@ class AdminBookingsCubit extends Cubit<AdminBookingsState> {
 
   void listenAllBookings() {
     emit(AdminBookingsLoading());
-    // نجلب كل الحجوزات بدون تقييد uid (هذه شاشة إدمن)
     _sub?.cancel();
-    _sub = bookingRepository
-        .getAllBookingsStream() // نضيفها في الريبو
-        .listen(
-          (bookings) {
-            final loaded = AdminBookingsLoaded(
-              all: bookings,
-              filtered: bookings,
-              query: '',
-              statusFilter: 'all',
-            );
-            emit(loaded);
-          },
-          onError: (e) {
-            emit(AdminBookingsError('Failed to load bookings'));
-          },
+    _sub = bookingRepository.getAllBookingsStream().listen(
+      (bookings) {
+        final loaded = AdminBookingsLoaded(
+          all: bookings,
+          filtered: bookings,
+          query: '',
+          statusFilter: 'all',
         );
+        emit(loaded);
+      },
+      onError: (e) {
+        emit(AdminBookingsError('Failed to load bookings'));
+      },
+    );
   }
 
   void applyQuery(String query) {
@@ -93,7 +90,7 @@ class AdminBookingsCubit extends Cubit<AdminBookingsState> {
 
   Future<void> updateStatus({
     required String bookingId,
-    required String newStatus, // approved / declined
+    required String newStatus,
     String? adminNote,
   }) async {
     try {
@@ -120,8 +117,6 @@ class AdminBookingsCubit extends Cubit<AdminBookingsState> {
       }
 
       emit(AdminBookingUpdated('Booking $newStatus successfully'));
-      // بعد نجاح التحديث، أعد تحميل القائمة عبر الاشتراك القائم أصلاً
-      // (الستريم سيحدث الحالة تلقائياً)
     } catch (e) {
       emit(AdminBookingsError('Failed to update status'));
     }

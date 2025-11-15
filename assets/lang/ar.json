@@ -535,7 +535,9 @@
   "cart_is_empty_to_order": "سلة التسوق فارغة. أضف عناصر قبل تقديم الطلب.",
   "order_placed_successfully": "تم تقديم الطلب بنجاح!",
   "failed_to_place_order": "فشل في تقديم الطلب. يرجى المحاولة مرة أخرى.",
-  "unnamed": "منتج بدون اسم"
+  "unnamed": "منتج بدون اسم",
+  "contact_us":"تواصل معنا",
+  "market_orders": "طلبات العملاء"
 
 }
 

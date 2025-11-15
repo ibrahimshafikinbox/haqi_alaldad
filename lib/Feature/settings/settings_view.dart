@@ -8,6 +8,7 @@ import 'package:store_mangment/Core/Widget/confirmation_dialog.dart';
 import 'package:store_mangment/Feature/Change_password/change_password_view.dart';
 import 'package:store_mangment/Feature/Login/View/login_view.dart';
 import 'package:store_mangment/Feature/Login/cubit/login_cubit.dart';
+import 'package:store_mangment/Feature/contact_us/contact_us_view.dart';
 import 'package:store_mangment/Feature/static_pages/privacy.dart';
 import 'package:store_mangment/Feature/static_pages/terms.dart';
 import 'package:store_mangment/Feature/settings/cubit/setting_cubit.dart';
@@ -286,6 +287,15 @@ class SettingsView extends StatelessWidget {
                       Colors.green,
                       () {
                         navigateTo(context, PrivacyAndSecurityScreen());
+                      },
+                    ),
+                    _buildSettingsOption(
+                      context,
+                      AppLocalizations.of(context).translate("contact_us"),
+                      Icons.call,
+                      Colors.blue,
+                      () {
+                        navigateTo(context, ContactUsPage());
                       },
                     ),
                     const SizedBox(height: 28),

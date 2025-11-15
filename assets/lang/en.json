@@ -459,16 +459,13 @@
   
   "terms_disclaimer": "Disclaimer: These terms provide general guidance for veterinary services and are not legal advice. Policies may vary by region and clinic. Please consult the clinic directly for detailed terms.",
   
-  "i_agree_continue": "I Agree & Continue",
-  "by_continuing_agree": "By continuing, you agree to these terms.",
+   "by_continuing_agree": "By continuing, you agree to these terms.",
 "booked_successfully": "Booked successfully",
   "book_your_service": "Book Your Service",
   "personal_information": "Personal Information",
-  "full_name": "Full Name",
-  "please_enter_your_name": "Please enter your name",
+   "please_enter_your_name": "Please enter your name",
   "name_is_too_short": "Name is too short",
-  "phone_number": "Phone Number",
-  "please_enter_your_phone_number": "Please enter your phone number",
+   "please_enter_your_phone_number": "Please enter your phone number",
   "enter_a_valid_phone_number": "Enter a valid phone number",
   "date_and_time": "Date & Time",
   "select_date": "Select Date",
@@ -484,24 +481,13 @@
   "submitting": "Submitting...",
   "confirm_booking": "Confirm Booking",
   
-  "shopping_cart": "Shopping Cart",
-  "your_cart_is_empty": "Your cart is empty",
-  "add_some_amazing_products": "Add some amazing products to get started",
-  "items": "Items",
-  "order_summary": "Order Summary",
-  "subtotal": "SubTotal:",
-  "shipping": "Shipping:",
-  "free": "Free",
-  "total": "Total:",
+ 
   "confirm_payment": "Confirm Payment",
   "payment_confirmation": "Payment Confirmation",
   "payment_confirmation_message": "Are you sure you want to proceed with payment?",
-  "order_placed_successfully": "Order placed successfully!",
-  "failed_to_place_order": "Failed to place order. Please try again.",
-  "invalid_total_amount": "Invalid total amount.",
-  "unnamed": "Unnamed"
+ 
 
-,"loading_pet_care_services": "Loading your pet care services...",
+"loading_pet_care_services": "Loading your pet care services...",
    "ready_to_care": "Ready to care for your pet today?",
   "search_products_services": "Search products, services...",
   "categories": "Categories",
@@ -514,8 +500,7 @@
 
 
 ,  "product_details": "Product Details",
-  "details": "Details",
-  "buy_now": "Buy Now",
+   "buy_now": "Buy Now",
   "shopping_cart": "Shopping Cart",
   "your_cart_is_empty": "Your Cart is Empty",
   "add_some_amazing_products": "Add some amazing products to get started!",
@@ -533,6 +518,8 @@
   "order_placed_successfully": "Order placed successfully!",
   "failed_to_place_order": "Failed to place order. Please try again.",
   "unnamed": "Unnamed Product"
+  ,  "contact_us":"Contact Us",
+  "market_orders": "clinic Orders"
 
 
 

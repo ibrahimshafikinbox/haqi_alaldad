@@ -9,6 +9,8 @@ import 'package:store_mangment/Feature/Login/cubit/login_cubit.dart';
 import 'package:store_mangment/Feature/Main/View/main_view.dart';
 import 'package:store_mangment/Feature/Orders/cubit/order_cubit.dart';
 import 'package:store_mangment/Feature/admin_booking/cubit/admin_bookings_cubit.dart';
+import 'package:store_mangment/Feature/admin_market_order/cubuit/admin_market_order_cubit.dart';
+import 'package:store_mangment/Feature/admin_market_order/view/admin_market_orders_screen.dart';
 import 'package:store_mangment/Feature/customer_section/Customer_cart/Cubit/cart_cubit.dart';
 import 'package:store_mangment/Feature/customer_section/Main_customer/View/customer_main_view.dart';
 import 'package:store_mangment/Feature/customer_section/book_service/cubut/book_cubit.dart';
@@ -68,7 +70,6 @@ class _MyAppState extends State<MyApp> {
         _locale = Locale(languageCode);
       });
     } else {
-      // ✅ لو مفيش لغة محفوظة، استخدم العربية كـ default
       setState(() {
         _locale = const Locale('ar');
       });
@@ -99,6 +100,8 @@ class _MyAppState extends State<MyApp> {
         ),
         BlocProvider(create: (_) => HomeCubit()),
         BlocProvider(create: (_) => CartCubit()),
+        BlocProvider(create: (_) => AdminMarketOrderCubit()),
+
         BlocProvider(create: (_) => OrderCubit()),
         BlocProvider(
           create: (_) => BookingCubit(repository: BookingRepository()),
@@ -115,15 +118,14 @@ class _MyAppState extends State<MyApp> {
           Locale('fr'), // French
         ],
 
-        // ✅ ✅ ✅ الحل هنا: ضيف الـ AppLocalizations.delegate
         localizationsDelegates: const [
-          AppLocalizations.delegate, // ✅✅✅ هذا السطر المهم
+          AppLocalizations.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
 
-        locale: _locale ?? const Locale('ar'), // ✅ Default locale
+        locale: _locale ?? const Locale('ar'),
         localeResolutionCallback: (deviceLocale, supportedLocales) {
           if (deviceLocale != null) {
             for (var locale in supportedLocales) {
@@ -132,11 +134,12 @@ class _MyAppState extends State<MyApp> {
               }
             }
           }
-          return supportedLocales.first; // Default to first supported locale
+          return supportedLocales.first;
         },
         home: widget.uid == null
             ? const LoginView()
             : RoleBasedScreen(uid: widget.uid),
+        // home: AdminMarketOrdersScreen(),
       ),
     );
   }
