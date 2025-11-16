@@ -11,15 +11,14 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// قراءة ملف المفاتيح
-val keystoreProperties = Properties()
+ val keystoreProperties = Properties()
 val keystorePropertiesFile = rootProject.file("key.properties")
 if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
 
 android {
-    namespace = "com.haqi.store_mangment"
+    namespace = "com.vetclinic.store_mangment"
     compileSdk = 35
     ndkVersion = flutter.ndkVersion
 
@@ -33,7 +32,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.haqi.store_mangment"
+        applicationId = "com.vetclinic.store_mangment"
         minSdk = flutter.minSdkVersion
         targetSdk = 35
         versionCode = flutter.versionCode

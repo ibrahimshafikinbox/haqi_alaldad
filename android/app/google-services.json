@@ -7,47 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:682751805563:android:42b488d522c614bd73bade",
+        "mobilesdk_app_id": "1:682751805563:android:a9ff814e70c8fd6c73bade",
         "android_client_info": {
-          "package_name": "com.example.noureldeen_mart"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD90YrmLEDmFMdeQZ1pf7qKrv6ceC4ssdI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:682751805563:android:9bff9f7227a9d92473bade",
-        "android_client_info": {
-          "package_name": "com.example.store_mangment"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD90YrmLEDmFMdeQZ1pf7qKrv6ceC4ssdI"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:682751805563:android:b6277e79fdfac05073bade",
-        "android_client_info": {
-          "package_name": "com.haqi.store_mangment"
+          "package_name": "com.vetclinic.store_mangment"
         }
       },
       "oauth_client": [],
